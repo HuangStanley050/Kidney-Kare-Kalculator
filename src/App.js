@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "reactstrap";
-
+import Result from "./components/Result";
 import WizardForm from "./components/WizardForm";
-import showResults from "./components/showResults";
+//import showResults from "./components/showResults";
 
 function App() {
+  const [result, showResult] = useState(false);
+  console.log(result);
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Kidney Kare Kalculator</h1>
+      <h1 style={{ textAlign: "center", marginTop: "2rem" }}>
+        Kidney Kare Kalculator
+      </h1>
       <Container>
-        <WizardForm onSubmit={showResults} />
+        {result ? <Result /> : <WizardForm onSubmit={() => showResult(true)} />}
       </Container>
     </div>
   );

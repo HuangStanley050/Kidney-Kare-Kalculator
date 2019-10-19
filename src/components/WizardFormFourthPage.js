@@ -1,11 +1,12 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { Form, Button } from "reactstrap";
+import { connect } from "react-redux";
 import validate from "./validate";
 import renderField from "./renderField";
 
 const WizardFormFourthPage = props => {
-  const { handleSubmit } = props;
+  const { handleSubmit, previousPage } = props;
   return (
     <Form onSubmit={handleSubmit}>
       <Field
@@ -39,6 +40,9 @@ const WizardFormFourthPage = props => {
         label="Do you have strong or abnormal smell to your urine?"
       />
       <div>
+        <Button type="button" className="previous" onClick={previousPage}>
+          Previous
+        </Button>
         <Button type="submit" className="next">
           Submit
         </Button>
