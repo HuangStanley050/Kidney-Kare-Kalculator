@@ -1,5 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Container } from "reactstrap";
+import happy from "../assets/results/happy.jpg";
+import help from "../assets/results/help.jpg";
+import sad from "../assets/results/sad.jpg";
+import unhappy from "../assets/results/unhappy.jpg";
 
 // Q1, Q4 and Q14 worth 3 pts
 // Q1 What is your age grou?
@@ -25,6 +30,7 @@ const ResultPage = props => {
   const keyData = Object.entries(values);
   let totalPoints = 0;
   let kidneyResult;
+  let pictureResult;
 
   for (const [key, data] of keyData) {
     if (data === "No") {
@@ -69,9 +75,35 @@ const ResultPage = props => {
       kidneyResult = "Urgent Help";
       break;
   }
-  console.log(totalPoints);
-  console.log(kidneyResult);
-  return <h1>Result page</h1>;
+  // console.log(totalPoints);
+  // console.log(kidneyResult);
+  if (kidneyResult === "Happy") {
+    pictureResult = happy;
+  } else if (kidneyResult === "Urgent Help") {
+    pictureResult = sad;
+  } else if (kidneyResult === "Medium") {
+    pictureResult = unhappy;
+  } else {
+    pictureResult = help;
+  }
+  return (
+    <div>
+      <Container>
+        <h1 style={{ textAlign: "center" }}>Result Page</h1>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <img src={pictureResult} alt="result" />
+        </div>
+        <h2 style={{ textAlign: "center" }}>Your score is : {totalPoints} </h2>
+        <p style={{ textAlign: "center" }}>
+          Please visit
+          <a href="https://kidney.org.au/" target="_blank">
+            {" "}
+            Kidney Health Australia for more inforamtion
+          </a>
+        </p>
+      </Container>
+    </div>
+  );
 };
 const mapStateToProps = state => ({
   wizard: state.form.wizard
