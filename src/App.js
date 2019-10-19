@@ -1,15 +1,16 @@
 import React from "react";
 import { Container } from "reactstrap";
 import Form from "./components/Form";
+import WizardForm from "./components/WizardForm";
+import showResults from "./components/showResults";
 
 function App() {
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Kidney Kare Kalculator</h1>
       <Container>
-        <Form />
+        <WizardForm onSubmit={showResults} />
       </Container>
-      ;
     </div>
   );
 }
