@@ -6,7 +6,7 @@ import WizardForm from "./components/WizardForm";
 
 function App() {
   const [result, showResult] = useState(false);
-  console.log(result);
+
   return (
     <div>
       <h1 style={{ textAlign: "center", marginTop: "2rem" }}>
