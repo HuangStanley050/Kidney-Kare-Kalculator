@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
-const Step1 = props => {
+const Step3 = props => {
   return (
     <div>
       <h2>Step {props.currentStep}</h2>
@@ -53,4 +53,4 @@ const Step1 = props => {
   );
 };
 
-export default Step1;
+export default Step3;
