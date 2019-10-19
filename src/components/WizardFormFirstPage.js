@@ -126,7 +126,7 @@ const WizardFormFirstPage = props => {
           1 to 3 cups
         </FormGroup>
       </FormGroup>
-      <div>
+      <div className="button_style">
         <Button type="submit" className="next">
           Next
         </Button>

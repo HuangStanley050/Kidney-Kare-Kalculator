@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import { Form, Button } from "reactstrap";
+import { Form, Button, FormGroup, Label } from "reactstrap";
 import renderField from "./renderField";
 import validate from "./validate";
 const colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
@@ -23,33 +23,119 @@ const WizardFormThirdPage = props => {
   const { handleSubmit, pristine, previousPage, submitting, nextPage } = props;
   return (
     <Form onSubmit={handleSubmit}>
-      <Field
-        name="Sleeping"
-        type="text"
-        label="Do you have trouble sleeping?"
-        component={renderField}
-      />
+      <FormGroup>
+        <FormGroup>
+          <Label>Do you have poor appetite?</Label>
+        </FormGroup>
+        <FormGroup>
+          <Label>
+            <Field
+              name="Appetite"
+              component="input"
+              type="radio"
+              value="Yes"
+            ></Field>
+          </Label>{" "}
+          Yes
+        </FormGroup>
+        <FormGroup>
+          <Label>
+            <Field
+              name="Appetite"
+              component="input"
+              type="radio"
+              value="No"
+            ></Field>
+          </Label>{" "}
+          No
+        </FormGroup>
+      </FormGroup>
 
-      <Field
-        name="Cramp"
-        type="text"
-        component={renderField}
-        label="Do you often have muscle cramps?"
-      />
-      <Field
-        name="Swollen"
-        type="text"
-        component={renderField}
-        label="Do have swollen feet and ankles?"
-      />
-      <Field
-        name="Puffy"
-        type="text"
-        component={renderField}
-        label="Do have puffiness around your eyes, especially in the morning?"
-      />
+      <FormGroup>
+        <FormGroup>
+          <Label>Do you have trouble sleeping?</Label>
+        </FormGroup>
+        <FormGroup>
+          <Label>
+            <Field
+              name="Sleeping"
+              component="input"
+              type="radio"
+              value="Yes"
+            ></Field>
+          </Label>{" "}
+          Yes
+        </FormGroup>
+        <FormGroup>
+          <Label>
+            <Field
+              name="Sleeping"
+              component="input"
+              type="radio"
+              value="No"
+            ></Field>
+          </Label>{" "}
+          No
+        </FormGroup>
+      </FormGroup>
 
-      <div>
+      <FormGroup>
+        <FormGroup>
+          <Label>Do you have muscle cramps at night?</Label>
+        </FormGroup>
+        <FormGroup>
+          <Label>
+            <Field
+              name="Cramps"
+              component="input"
+              type="radio"
+              value="Yes"
+            ></Field>
+          </Label>{" "}
+          Yes
+        </FormGroup>
+        <FormGroup>
+          <Label>
+            <Field
+              name="Cramps"
+              component="input"
+              type="radio"
+              value="No"
+            ></Field>
+          </Label>{" "}
+          No
+        </FormGroup>
+      </FormGroup>
+
+      <FormGroup>
+        <FormGroup>
+          <Label>Do you have swollen feet and ankle?</Label>
+        </FormGroup>
+        <FormGroup>
+          <Label>
+            <Field
+              name="Swollen"
+              component="input"
+              type="radio"
+              value="Yes"
+            ></Field>
+          </Label>{" "}
+          Yes
+        </FormGroup>
+        <FormGroup>
+          <Label>
+            <Field
+              name="Swollen"
+              component="input"
+              type="radio"
+              value="No"
+            ></Field>
+          </Label>{" "}
+          No
+        </FormGroup>
+      </FormGroup>
+
+      <div className="button_style">
         <Button type="button" className="previous" onClick={previousPage}>
           Previous
         </Button>

@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <h1 style={{ textAlign: "center", marginTop: "2rem" }}>
-        Kidney Kare Kalculator
+        Kidney KareCalc
       </h1>
       <Container>
         {result ? <Result /> : <WizardForm onSubmit={() => showResult(true)} />}

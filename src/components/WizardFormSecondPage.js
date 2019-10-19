@@ -39,28 +39,7 @@ const WizardFormSecondPage = props => {
   const { handleSubmit, previousPage } = props;
 
   return (
-    <Form>
-      <FormGroup>
-        <FormGroup>
-          <Label>How much water do you drink a day?</Label>
-        </FormGroup>
-        <FormGroup>
-          <Field name="Water" component="input" type="radio" value="6-8" /> 6-8
-        </FormGroup>
-        <FormGroup>
-          <Label check>
-            <Field name="Water" component="input" type="radio" value="4-6" />{" "}
-            4-6
-          </Label>
-        </FormGroup>
-        <FormGroup>
-          <Label>
-            <Field name="Water" component="input" type="radio" value="1-3" />{" "}
-            1-3
-          </Label>
-        </FormGroup>
-      </FormGroup>
-
+    <Form onSubmit={handleSubmit}>
       <FormGroup>
         <FormGroup>
           <Label>Do you drink alcohol?</Label>
@@ -128,8 +107,37 @@ const WizardFormSecondPage = props => {
           ></Field>{" "}
           No
         </FormGroup>
+        <FormGroup>
+          <FormGroup>
+            <Label>
+              Do you have puffiness around your eyes especially in the morning?
+            </Label>
+          </FormGroup>
+          <FormGroup>
+            <Label>
+              <Field
+                name="EyePuff"
+                component="input"
+                type="radio"
+                value="Yes"
+              ></Field>
+            </Label>{" "}
+            Yes
+          </FormGroup>
+          <FormGroup>
+            <Label>
+              <Field
+                name="EyePuff"
+                component="input"
+                type="radio"
+                value="No"
+              ></Field>
+            </Label>{" "}
+            No
+          </FormGroup>
+        </FormGroup>
       </FormGroup>
-      <div>
+      <div className="button_style">
         <Button type="button" className="previous" onClick={previousPage}>
           Previous
         </Button>
