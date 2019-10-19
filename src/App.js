@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "reactstrap";
-import Form from "./components/Form";
+
 import WizardForm from "./components/WizardForm";
 import showResults from "./components/showResults";
 

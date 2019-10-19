@@ -1,13 +1,14 @@
 import React from "react";
+import { Input, Label, FormGroup } from "reactstrap";
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
-  <div>
-    <label>{label}</label>
+  <FormGroup>
+    <Label>{label}</Label>
     <div>
-      <input {...input} placeholder={label} type={type} />
+      <Input {...input} placeholder={label} type={type} />
       {touched && error && <span>{error}</span>}
     </div>
-  </div>
+  </FormGroup>
 );
 
 export default renderField;

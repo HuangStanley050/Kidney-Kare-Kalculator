@@ -4,44 +4,43 @@ import { Form, Button } from "reactstrap";
 import validate from "./validate";
 import renderField from "./renderField";
 
-const renderError = ({ meta: { touched, error } }) =>
-  touched && error ? <span>{error}</span> : false;
-
-const WizardFormSecondPage = props => {
-  const { handleSubmit, previousPage } = props;
+const WizardFormFourthPage = props => {
+  const { handleSubmit } = props;
   return (
     <Form onSubmit={handleSubmit}>
       <Field
-        name="Alcohol"
+        name="Skin"
         type="text"
         component={renderField}
-        label="Do you drink alchol?"
+        label="Do you have dry itchy skin?"
       />
       <Field
-        name="Energy"
+        name="Toilet"
         type="text"
         component={renderField}
-        label="Do you feel more tired and have less energy?"
+        label="How oftend do you go to the toilet"
       />
       <Field
-        name="Concentration"
+        name="Blood"
         type="text"
         component={renderField}
-        label="Do you have problem concentrating?"
+        label="Do you have blood in your urine"
       />
       <Field
-        name="Appetite"
+        name="Cloudy"
         type="text"
         component={renderField}
-        label="Do you have poor appetite?"
+        label="Do you have white and cloudy urine?"
       />
-
+      <Field
+        name="Smell"
+        type="text"
+        component={renderField}
+        label="Do you have strong or abnormal smell to your urine?"
+      />
       <div>
-        <Button type="button" className="previous" onClick={previousPage}>
-          Previous
-        </Button>
         <Button type="submit" className="next">
-          Next
+          Submit
         </Button>
       </div>
     </Form>
@@ -53,4 +52,4 @@ export default reduxForm({
   destroyOnUnmount: false, //        <------ preserve form data
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
   validate
-})(WizardFormSecondPage);
+})(WizardFormFourthPage);

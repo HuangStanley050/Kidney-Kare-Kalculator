@@ -1,5 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { Form, Button } from "reactstrap";
+import renderField from "./renderField";
 import validate from "./validate";
 const colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
 
@@ -18,39 +20,44 @@ const renderColorSelector = ({ input, meta: { touched, error } }) => (
 );
 
 const WizardFormThirdPage = props => {
-  const { handleSubmit, pristine, previousPage, submitting } = props;
+  const { handleSubmit, pristine, previousPage, submitting, nextPage } = props;
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
+      <Field
+        name="Sleeping"
+        type="text"
+        label="Do you have trouble sleeping?"
+        component={renderField}
+      />
+
+      <Field
+        name="Cramp"
+        type="text"
+        component={renderField}
+        label="Do you often have muscle cramps?"
+      />
+      <Field
+        name="Swollen"
+        type="text"
+        component={renderField}
+        label="Do have swollen feet and ankles?"
+      />
+      <Field
+        name="Puffy"
+        type="text"
+        component={renderField}
+        label="Do have puffiness around your eyes, especially in the morning?"
+      />
+
       <div>
-        <label>Favorite Color</label>
-        <Field name="favoriteColor" component={renderColorSelector} />
-      </div>
-      <div>
-        <label htmlFor="employed">Employed</label>
-        <div>
-          <Field
-            name="employed"
-            id="employed"
-            component="input"
-            type="checkbox"
-          />
-        </div>
-      </div>
-      <div>
-        <label>Notes</label>
-        <div>
-          <Field name="notes" component="textarea" placeholder="Notes" />
-        </div>
-      </div>
-      <div>
-        <button type="button" className="previous" onClick={previousPage}>
+        <Button type="button" className="previous" onClick={previousPage}>
           Previous
-        </button>
-        <button type="submit" disabled={pristine || submitting}>
-          Submit
-        </button>
+        </Button>
+        <Button type="submit" className="next">
+          Next
+        </Button>
       </div>
-    </form>
+    </Form>
   );
 };
 export default reduxForm({
