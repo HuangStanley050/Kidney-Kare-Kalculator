@@ -8,7 +8,7 @@ const Step4 = props => {
       <Form>
         <FormGroup>
           <FormGroup>
-            <Label for="exampleEmail">PlaceHolder Question</Label>
+            <Label for="exampleEmail">Do have dry, itchy skin?</Label>
             <Input
               type="email"
               name="email"
@@ -17,7 +17,9 @@ const Step4 = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="examplePassword">PlaceHolder Question</Label>
+            <Label for="examplePassword">
+              How often do you go to the toilet to pass urine?
+            </Label>
             <Input
               type="password"
               name="password"
@@ -25,7 +27,7 @@ const Step4 = props => {
               placeholder="password placeholder"
             />
           </FormGroup>
-          <Label for="exampleEmail">PlaceHolder Question</Label>
+          <Label for="exampleEmail">Do you have white and cloudy urine?</Label>
           <Input
             type="email"
             name="email"
@@ -34,7 +36,9 @@ const Step4 = props => {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="examplePassword">PlaceHolder Question</Label>
+          <Label for="examplePassword">
+            Do you have strong or abnormal smell to your urine?
+          </Label>
           <Input
             type="password"
             name="password"

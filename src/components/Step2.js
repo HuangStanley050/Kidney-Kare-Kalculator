@@ -8,7 +8,7 @@ const Step2 = props => {
       <Form>
         <FormGroup>
           <FormGroup>
-            <Label for="exampleEmail">PlaceHolder Question</Label>
+            <Label for="exampleEmail">Do you drink alcohol?</Label>
             <Input
               type="email"
               name="email"
@@ -17,7 +17,9 @@ const Step2 = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="examplePassword">PlaceHolder Question</Label>
+            <Label for="examplePassword">
+              Do you feel more tired and have less energy?
+            </Label>
             <Input
               type="password"
               name="password"
@@ -25,7 +27,7 @@ const Step2 = props => {
               placeholder="password placeholder"
             />
           </FormGroup>
-          <Label for="exampleEmail">PlaceHolder Question</Label>
+          <Label for="exampleEmail">Do you have trouble concentrating?</Label>
           <Input
             type="email"
             name="email"
@@ -34,7 +36,7 @@ const Step2 = props => {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="examplePassword">PlaceHolder Question</Label>
+          <Label for="examplePassword">Do you have poor appetite</Label>
           <Input
             type="password"
             name="password"

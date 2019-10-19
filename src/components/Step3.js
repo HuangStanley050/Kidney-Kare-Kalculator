@@ -8,7 +8,7 @@ const Step3 = props => {
       <Form>
         <FormGroup>
           <FormGroup>
-            <Label for="exampleEmail">PlaceHolder Question</Label>
+            <Label for="exampleEmail">Do you have trouble sleeping?</Label>
             <Input
               type="email"
               name="email"
@@ -17,7 +17,9 @@ const Step3 = props => {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="examplePassword">PlaceHolder Question</Label>
+            <Label for="examplePassword">
+              Do you have muscle cramps at night?
+            </Label>
             <Input
               type="password"
               name="password"
@@ -25,7 +27,9 @@ const Step3 = props => {
               placeholder="password placeholder"
             />
           </FormGroup>
-          <Label for="exampleEmail">PlaceHolder Question</Label>
+          <Label for="exampleEmail">
+            Do have puffiness around your eyes, especially in the morning?
+          </Label>
           <Input
             type="email"
             name="email"
@@ -34,7 +38,9 @@ const Step3 = props => {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="examplePassword">PlaceHolder Question</Label>
+          <Label for="examplePassword">
+            What is your level of alcoholic consumption?
+          </Label>
           <Input
             type="password"
             name="password"
