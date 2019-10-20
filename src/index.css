@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: '100vh';
+}
+
 .button_style {
   margin: 0 auto;
   display: flex;
